@@ -5,8 +5,15 @@
 
     function slugCheck() {
         var directive = {
-            restrict: 'A'
+            restrict: 'A',
+            link: link
         };
+
+        function link(scope, element) {
+            element.on('blur', function () {
+            });
+        }
+
         return directive;
     }
 })();
